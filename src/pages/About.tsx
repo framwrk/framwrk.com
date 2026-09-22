@@ -1,26 +1,29 @@
+import { H1, H2, P, Ul } from "@/components/typography"
+import { Section } from "@/components/site"
+
 export default function About() {
   return (
     <>
-      <section>
-        <h1>About Framwrk</h1>
-        <p>
+      <Section className="py-16">
+        <H1>About Framwrk</H1>
+        <P className="mt-4">
           Framwrk started in 2024 as an internal toolkit and grew into a
           product when we realized every team was solving the same problems:
           slow builds, inconsistent components, and configuration sprawl.
-        </p>
-      </section>
+        </P>
+      </Section>
 
-      <section>
-        <h2>Our mission</h2>
-        <p>
+      <Section>
+        <H2>Our mission</H2>
+        <P className="mt-4">
           Make it effortless to build fast, accessible web applications
           without giving up control of your code.
-        </p>
-      </section>
+        </P>
+      </Section>
 
-      <section>
-        <h2>Our values</h2>
-        <ul>
+      <Section>
+        <H2>Our values</H2>
+        <Ul>
           <li>
             <strong>Ship small.</strong> Small changes, verified, beat big
             bets that break.
@@ -33,8 +36,8 @@ export default function About() {
             <strong>Access is not optional.</strong> Accessibility is part of
             done, not a follow-up.
           </li>
-        </ul>
-      </section>
+        </Ul>
+      </Section>
     </>
   )
 }
