@@ -3,7 +3,6 @@ import { Link } from "react-router"
 import { cn } from "cn"
 
 const navItems = [
-  { to: "/", label: "Home" },
   { to: "/about", label: "About" },
 ]
 
