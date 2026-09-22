@@ -1,21 +1,24 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { H1, H2, Lead, P } from "@/components/typography"
-import { Link } from "react-router"
+import { H1, H2, Lead, Muted, P } from "@/components/typography"
 import { Section } from "@/components/site"
 
-const features = [
+const products = [
   {
-    title: "Fast by default",
-    description: "Zero-config builds and instant hot reloads out of the box.",
+    name: "Pallet",
+    description:
+      "A free and open-source dual-pane file manager for macOS. Connect to servers over SFTP, FTP, or explicit FTPS and move files like you mean it. Keyboard-first, self-healing transfers, and no telemetry, ever.",
+    href: "https://pallet.framwrk.com/",
+    linkLabel: "Visit pallet.framwrk.com",
+    meta: "macOS · Apache-2.0",
   },
   {
-    title: "Accessible components",
-    description: "Every primitive ships with keyboard support and ARIA semantics.",
-  },
-  {
-    title: "Typed end to end",
-    description: "Strict TypeScript across the whole stack, no exceptions.",
+    name: "Tidy",
+    description:
+      "A command-line tool that wraps installers and remembers what they added, so you can cleanly remove them later. Built with Bun, runs on macOS.",
+    href: "https://github.com/framwrk/Tidy",
+    linkLabel: "View on GitHub",
+    meta: "macOS · Apache-2.0",
   },
 ]
 
@@ -23,28 +26,28 @@ export default function Home() {
   return (
     <>
       <Section className="py-16">
-        <H1>Build with Framwrk</H1>
+        <H1>Framwrk</H1>
         <Lead className="mt-4 max-w-prose">
-          Framwrk is a lightweight toolkit for shipping fast, accessible web
-          applications. Write components, connect your data, and deploy in
-          minutes.
+          Framwrk is a software company building small, focused tools that do
+          one job well. Everything we ship is free and open source.
         </Lead>
-        <div className="mt-6 flex flex-wrap gap-2">
-          <Button render={<Link to="/features" />}>See the features</Button>
-          <Button variant="outline" render={<Link to="/pricing" />}>
-            View pricing
-          </Button>
-        </div>
       </Section>
 
       <Section>
-        <H2>Why teams choose Framwrk</H2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          {features.map((feature) => (
-            <Card key={feature.title}>
+        <H2>Our products</H2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          {products.map((product) => (
+            <Card key={product.name}>
               <CardHeader>
-                <CardTitle>{feature.title}</CardTitle>
-                <CardDescription>{feature.description}</CardDescription>
+                <CardTitle>{product.name}</CardTitle>
+                <CardDescription>{product.description}</CardDescription>
+                <Muted className="mt-2 block text-xs">{product.meta}</Muted>
+                <Button
+                  className="mt-2 w-fit"
+                  render={<a href={product.href} target="_blank" rel="noreferrer" />}
+                >
+                  {product.linkLabel}
+                </Button>
               </CardHeader>
             </Card>
           ))}
@@ -52,13 +55,13 @@ export default function Home() {
       </Section>
 
       <Section>
-        <H2>Get started today</H2>
-        <P className="mt-4">
-          Join thousands of developers already building with Framwrk.
-        </P>
-        <Button className="mt-6" render={<Link to="/pricing" />}>
-          Start for free
-        </Button>
+        <H2>What we believe</H2>
+        <P className="mt-4">Three principles behind everything we build.</P>
+        <ul className="mt-4 list-disc space-y-2 pl-5">
+          <li>Software should respect you: no telemetry, no lock-in.</li>
+          <li>Open source is the default, not a feature.</li>
+          <li>Small tools, done well, beat bloated suites.</li>
+        </ul>
       </Section>
     </>
   )

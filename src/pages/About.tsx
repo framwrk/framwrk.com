@@ -7,23 +7,24 @@ export default function About() {
       <Section className="py-16">
         <H1>About Framwrk</H1>
         <P className="mt-4">
-          Framwrk started in 2024 as an internal toolkit and grew into a
-          product when we realized every team was solving the same problems:
-          slow builds, inconsistent components, and configuration sprawl.
+          Framwrk is a software company that builds free, open-source tools
+          for people who work on the command line and care about their
+          machines. Our products are small and opinionated: they do one job
+          well, get out of the way, and never phone home.
         </P>
       </Section>
 
       <Section>
         <H2>Our mission</H2>
         <P className="mt-4">
-          Make it effortless to build fast, accessible web applications
-          without giving up control of your code.
+          Make focused, honest software that respects its users: no
+          telemetry, no lock-in, no bloat.
         </P>
       </Section>
 
       <Section>
         <H2>Our values</H2>
-        <Ul>
+        <Ul className="mt-4">
           <li>
             <strong>Ship small.</strong> Small changes, verified, beat big
             bets that break.
@@ -33,8 +34,8 @@ export default function About() {
             overrides, no magic.
           </li>
           <li>
-            <strong>Access is not optional.</strong> Accessibility is part of
-            done, not a follow-up.
+            <strong>Open source is the default.</strong> Every product we
+            release, you can read, audit, and build yourself.
           </li>
         </Ul>
       </Section>

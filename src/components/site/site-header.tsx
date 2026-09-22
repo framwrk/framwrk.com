@@ -4,8 +4,6 @@ import { cn } from "cn"
 
 const navItems = [
   { to: "/", label: "Home" },
-  { to: "/features", label: "Features" },
-  { to: "/pricing", label: "Pricing" },
   { to: "/about", label: "About" },
 ]
 
