@@ -7,16 +7,16 @@ const products = [
   {
     name: "Pallet",
     description:
-      "A free and open-source dual-pane file manager for macOS. Connect to servers over SFTP, FTP, or explicit FTPS and move files like you mean it. Keyboard-first, self-healing transfers, and no telemetry, ever.",
+      "SSH/SFTP macOS Application",
     href: "https://pallet.framwrk.com/",
     linkLabel: "Visit pallet.framwrk.com",
     meta: "macOS · Apache-2.0",
   },
   {
-    name: "Tidy",
+    name: "Tret",
     description:
-      "A command-line tool that wraps installers and remembers what they added, so you can cleanly remove them later. Built with Bun, runs on macOS.",
-    href: "https://github.com/framwrk/Tidy",
+      "A CLI tool that installs other CLI tools",
+    href: "https://github.com/framwrk/tret",
     linkLabel: "View on GitHub",
     meta: "macOS · Apache-2.0",
   },
