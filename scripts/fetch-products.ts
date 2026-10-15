@@ -32,8 +32,8 @@ type ApiRepo = {
 type Product = {
   name: string
   description: string
-  href: string
-  linkLabel: string
+  repoUrl: string
+  homepage?: string
   meta?: string
 }
 
@@ -78,16 +78,13 @@ function displayName(repoName: string): string {
 }
 
 function toProduct(repo: ApiRepo): Product {
-  let href = repo.html_url
-  let linkLabel = "View on GitHub"
   const homepage = repo.homepage?.trim()
+  let website: string | undefined
   if (homepage) {
     try {
-      const url = new URL(homepage)
-      href = url.toString()
-      linkLabel = `Visit ${url.host}`
+      website = new URL(homepage).toString()
     } catch {
-      // Ignore a malformed homepage and link the repo instead.
+      // Ignore a malformed homepage; the card still links the repo.
     }
   }
 
@@ -98,8 +95,8 @@ function toProduct(repo: ApiRepo): Product {
   return {
     name: displayName(repo.name),
     description: repo.description ?? "",
-    href,
-    linkLabel,
+    repoUrl: repo.html_url,
+    homepage: website,
     meta: meta || undefined,
   }
 }
@@ -113,8 +110,8 @@ function renderFile(products: Product[]): string {
 export type Product = {
   name: string
   description: string
-  href: string
-  linkLabel: string
+  repoUrl: string
+  homepage?: string
   meta?: string
 }
 

@@ -5,12 +5,12 @@
 export type Product = {
   name: string
   description: string
-  href: string
-  linkLabel: string
+  repoUrl: string
+  homepage?: string
   meta?: string
 }
 
 export const products: Product[] = [
-  {"name":"Pallet","description":"SSH/SFTP macOS Application","href":"https://pallet.framwrk.com/","linkLabel":"Visit pallet.framwrk.com","meta":"macOS · Apache-2.0"},
-  {"name":"Tret","description":"A CLI tool that installs other CLI tools","href":"https://tret.framwrk.com/","linkLabel":"Visit tret.framwrk.com","meta":"macOS · Apache-2.0"},
+  {"name":"Pallet","description":"SSH/SFTP macOS Application","repoUrl":"https://github.com/framwrk/pallet","meta":"macOS · Apache-2.0"},
+  {"name":"Tret","description":"A CLI tool that installs other CLI tools","repoUrl":"https://github.com/framwrk/tret","homepage":"https://tret.framwrk.com/","meta":"macOS · Apache-2.0"},
 ]

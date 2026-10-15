@@ -24,12 +24,21 @@ export default function Home() {
                 <CardTitle>{product.name}</CardTitle>
                 <CardDescription>{product.description}</CardDescription>
                 <Muted className="mt-2 block text-xs">{product.meta}</Muted>
-                <Button
-                  className="mt-2 w-fit"
-                  render={<a href={product.href} target="_blank" rel="noreferrer" />}
-                >
-                  {product.linkLabel}
-                </Button>
+                <div className="mt-2 flex w-fit flex-wrap gap-2">
+                  <Button
+                    variant="outline"
+                    render={<a href={product.repoUrl} target="_blank" rel="noreferrer" />}
+                  >
+                    View on GitHub
+                  </Button>
+                  {product.homepage && (
+                    <Button
+                      render={<a href={product.homepage} target="_blank" rel="noreferrer" />}
+                    >
+                      Visit {new URL(product.homepage).host}
+                    </Button>
+                  )}
+                </div>
               </CardHeader>
             </Card>
           ))}
