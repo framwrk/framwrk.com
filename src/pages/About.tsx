@@ -9,7 +9,7 @@ export default function About() {
         <P className="mt-4">
           Framwrk is a software company that builds free, open-source tools
           for people who work on the command line and care about their
-          machines. Our products are small and opinionated: they do one job
+          machines. Our projects are small and opinionated: they do one job
           well, get out of the way, and never phone home.
         </P>
       </Section>
@@ -34,7 +34,7 @@ export default function About() {
             overrides, no magic.
           </li>
           <li>
-            <strong>Open source is the default.</strong> Every product we
+            <strong>Open source is the default.</strong> Every project we
             release, you can read, audit, and build yourself.
           </li>
         </Ul>

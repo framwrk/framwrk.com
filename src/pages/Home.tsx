@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { H1, H2, Lead, Muted, P } from "@/components/typography"
 import { Section } from "@/components/site"
-import { products } from "@/data/products.generated"
+import { projects } from "@/data/projects.generated"
 
 export default function Home() {
   return (
@@ -16,26 +16,26 @@ export default function Home() {
       </Section>
 
       <Section>
-        <H2>Our products</H2>
+        <H2>Our projects</H2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          {products.map((product) => (
-            <Card key={product.name}>
+          {projects.map((project) => (
+            <Card key={project.name}>
               <CardHeader>
-                <CardTitle>{product.name}</CardTitle>
-                <CardDescription>{product.description}</CardDescription>
-                <Muted className="mt-2 block text-xs">{product.meta}</Muted>
+                <CardTitle>{project.name}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+                <Muted className="mt-2 block text-xs">{project.meta}</Muted>
                 <div className="mt-2 flex w-fit flex-wrap gap-2">
                   <Button
                     variant="outline"
-                    render={<a href={product.repoUrl} target="_blank" rel="noreferrer" />}
+                    render={<a href={project.repoUrl} target="_blank" rel="noreferrer" />}
                   >
                     View on GitHub
                   </Button>
-                  {product.homepage && (
+                  {project.homepage && (
                     <Button
-                      render={<a href={product.homepage} target="_blank" rel="noreferrer" />}
+                      render={<a href={project.homepage} target="_blank" rel="noreferrer" />}
                     >
-                      Visit {new URL(product.homepage).host}
+                      Visit {new URL(project.homepage).host}
                     </Button>
                   )}
                 </div>

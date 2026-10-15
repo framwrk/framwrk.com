@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "products": "bun scripts/fetch-products.ts",
-    "prebuild": "bun run products",
+    "projects": "bun scripts/fetch-projects.ts",
+    "prebuild": "bun run projects",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
