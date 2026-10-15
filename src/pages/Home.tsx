@@ -2,25 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { H1, H2, Lead, Muted, P } from "@/components/typography"
 import { Section } from "@/components/site"
-
-const products = [
-  {
-    name: "Pallet",
-    description:
-      "SSH/SFTP macOS Application",
-    href: "https://pallet.framwrk.com/",
-    linkLabel: "Visit pallet.framwrk.com",
-    meta: "macOS · Apache-2.0",
-  },
-  {
-    name: "Tret",
-    description:
-      "A CLI tool that installs other CLI tools",
-    href: "https://github.com/framwrk/tret",
-    linkLabel: "View on GitHub",
-    meta: "macOS · Apache-2.0",
-  },
-]
+import { products } from "@/data/products.generated"
 
 export default function Home() {
   return (
